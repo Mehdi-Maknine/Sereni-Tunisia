@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Plane, House, Users, Medkit, FileText, Heart, Phone, Mail, MapPin, Star, CheckCircle } from 'lucide-react';
+import { Plane, House, Users, Briefcase, FileText, Heart, Phone, Mail, MapPin, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -113,7 +112,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="mx-auto w-16 h-16 mediterranean-blue rounded-full flex items-center justify-center mb-4">
-                  <Medkit className="w-8 h-8 text-white" />
+                  <Briefcase className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">Assistenza Medica</CardTitle>
               </CardHeader>
