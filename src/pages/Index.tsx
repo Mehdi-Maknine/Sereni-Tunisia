@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +35,8 @@ const Index = () => {
     });
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -52,6 +56,8 @@ const Index = () => {
             >
               Contattaci ora per maggiori informazioni
             </Button>
+            
+
           </div>
         </div>
         <div className="absolute inset-0 opacity-10">
@@ -62,6 +68,7 @@ const Index = () => {
           />
         </div>
       </section>
+      <Button onClick={() => navigate('/come-funziona')}>Come Funziona</Button>
 
       {/* Chi Siamo */}
       <section className="py-16 px-4">
