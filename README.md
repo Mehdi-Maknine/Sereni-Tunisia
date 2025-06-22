@@ -57,21 +57,6 @@ Tutte le pagine seguono la **stessa struttura**, componenti riutilizzabili e uno
 
 ---
 
-## 📦 Struttura del progetto
-
-Sereni-Tunisia/
-├── src/
-│ ├── components/ # Componenti riutilizzabili (Card, Navbar, Hero, Footer, etc.)
-│ ├── pages/ # Singole pagine (Homepage.jsx, Residences.jsx, etc.)
-│ ├── App.jsx # Router e struttura base
-│ ├── main.jsx # Entrypoint
-├── public/
-├── tailwind.config.js
-├── vite.config.js
-└── README.md
-
----
-
 ## 🚀 Deployment
 
 In futuro, il progetto potrà essere deployato su:
