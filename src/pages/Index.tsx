@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import Navbar from '@/components/Navbar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
@@ -39,6 +40,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
+
       {/* Hero Section */}
       <section className="relative warm-gradient py-20 px-4 text-center">
         <div className="container mx-auto max-w-4xl">
@@ -68,8 +71,6 @@ const Index = () => {
           />
         </div>
       </section>
-      <Button onClick={() => navigate('/come-funziona')}>Come Funziona</Button>
-
       {/* Chi Siamo */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">

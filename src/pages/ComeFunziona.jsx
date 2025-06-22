@@ -1,10 +1,12 @@
 import { Plane, ClipboardList, Smile, UserCheck, ShieldCheck, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Navbar from "@/components/Navbar"; 
 
 const ComeFunziona = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative warm-gradient py-20 px-4 text-center">
         <div className="container mx-auto max-w-4xl">

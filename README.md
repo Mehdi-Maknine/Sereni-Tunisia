@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
+# 🇹🇳 Sereni Tunisia — Vivere bene al sole
 
-## Project info
+Benvenuti nel progetto **Sereni Tunisia**, una piattaforma dedicata a promuovere la Tunisia come destinazione ideale per il trasferimento e il benessere della terza età. Il sito mira a fornire un'esperienza informativa, estetica e interattiva per utenti internazionali, soprattutto pensionati europei, interessati a trasferirsi o passare lunghi periodi in Tunisia.
 
-**URL**: https://lovable.dev/projects/3224a0b2-1a1a-48ac-9fe2-db2545f8d033
+---
 
-## How can I edit this code?
+## 🖥️ Tech Stack
 
-There are several ways of editing your application.
+- **React** (con Vite)
+- **Tailwind CSS**
+- **Lucide Icons**
+- **ShadCN UI**
+- **Framer Motion**
+- ✨ UI moderna e reattiva
+- 🌐 Pagine completamente modulari
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3224a0b2-1a1a-48ac-9fe2-db2545f8d033) and start prompting.
+## 📚 Pagine implementate
 
-Changes made via Lovable will be committed automatically to this repo.
+Tutte le pagine seguono la **stessa struttura**, componenti riutilizzabili e uno stile coerente.
 
-**Use your preferred IDE**
+### ✅ Homepage
+- Hero section
+- Missione del progetto
+- Vantaggi della Tunisia
+- Navigazione semplificata
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🛏️ Le Nostre Residenze
+- Card dinamiche con foto, posizione, prezzi
+- Layout responsivo
+- Pulsanti di contatto
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🩺 Servizi Medicali & Wellness
+- Sezione dettagliata su:
+  - Visite mediche
+  - Fisioterapia
+  - Supporto psicologico
+  - Servizi benessere
 
-Follow these steps:
+### 🌍 Vita in Tunisia
+- Perché scegliere la Tunisia
+- Informazioni su clima, sanità, costo della vita
+- Residenza e visti
+- Testimonianze reali
+- Attività giornaliere:
+  - Yoga
+  - Escursioni
+  - Eventi culturali
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### ❓ FAQ
+- Domande frequenti come:
+  - Serve il visto?
+  - È presente assistenza medica 24h?
+  - È parlato il francese?
+  - Posso portare il mio animale?
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📦 Struttura del progetto
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Sereni-Tunisia/
+├── src/
+│ ├── components/ # Componenti riutilizzabili (Card, Navbar, Hero, Footer, etc.)
+│ ├── pages/ # Singole pagine (Homepage.jsx, Residences.jsx, etc.)
+│ ├── App.jsx # Router e struttura base
+│ ├── main.jsx # Entrypoint
+├── public/
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🚀 Deployment
 
-**Use GitHub Codespaces**
+In futuro, il progetto potrà essere deployato su:
+- GitHub Pages (gratuito)
+- Vercel / Netlify (auto-deploy da GitHub)
+- Server personale o VPS
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+> 🧠 **Attenzione**: assicurarsi che tutte le immagini siano contenute nella cartella `public/` e che i percorsi siano relativi.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🎨 Design & UI
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Tutto il sito è progettato con attenzione a:
+  - **Accessibilità**
+  - **Responsività mobile**
+  - **Estetica moderna**
+- Viene usato **Framer Motion** per animazioni leggere e piacevoli
+- Colori e font coerenti con il brand "Sereni"
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/3224a0b2-1a1a-48ac-9fe2-db2545f8d033) and click on Share -> Publish.
+## 🛠️ In sviluppo
 
-## Can I connect a custom domain to my Lovable project?
+Le prossime funzionalità da implementare:
 
-Yes, you can!
+- 🧑‍⚕️ Sezione “Chi siamo” (staff medico, testimonianze)
+- 🧳 Pagina “Trasferirsi in Tunisia” (checklist, consulenza)
+- 🏖️ Pagina “Attività ed Escursioni”
+- 📞 Form di contatto funzionale
+- 🌍 Traduzioni in Inglese e Francese
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contatti
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Per collaborazioni, partnership o suggerimenti:
+
+📧 ordi2000@hotmail.fr
+🌍 [LinkedIn](https://www.linkedin.com/in/mehdi-maknine/)  
+📍 Tunisia / Italia
+
+---
+
+## 🧾 Licenza & Uso Commerciale
+Questo progetto è destinato ad uso commerciale.
+Contiene informazioni e componenti riservati riguardanti il trasferimento, la salute e il benessere personale.
+
+## ⚠️ Trattamento Dati Sensibili
+Alcune sezioni del sito possono trattare o rappresentare dati relativi a:
+
+servizi medici
+
+preferenze personali
+
+contatti e richieste private
+
+## 🔐 È quindi fondamentale trattare il contenuto con riservatezza.
+
+## 📄 Licenza MIT
+Il codice è distribuito sotto licenza MIT.
+Vedi LICENSE.md per dettagli.
+
+Per segnalazioni di sicurezza, consulta SECURITY.md
+
