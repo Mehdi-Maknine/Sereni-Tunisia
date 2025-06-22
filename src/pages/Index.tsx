@@ -453,7 +453,7 @@ const Index = () => {
             <span>•</span>
             <span>Termini di Servizio</span>
             <span>•</span>
-            <span>© 2024 Vivere Sereni</span>
+            <span>© 2025 Vivere Sereni</span>
           </div>
         </div>
       </footer>
