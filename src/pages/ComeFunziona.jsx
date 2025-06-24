@@ -7,6 +7,8 @@ const ComeFunziona = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      {/* Spazio sotto navbar */}
+      <div className="h-16 md:h-15" />
       {/* Hero Section */}
       <section className="relative warm-gradient py-20 px-4 text-center">
         <div className="container mx-auto max-w-4xl">
