@@ -36,6 +36,8 @@ const MedicalWellness = () => {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
         <Navbar />
+      {/* Spazio sotto navbar */}
+      <div className="h-16 md:h-15" />
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">🩺 Servizi Medici e Benessere</h2>
         <p className="mt-2 text-muted-foreground">Scopri tutti i servizi sanitari e di benessere pensati per la tua serenità.</p>
