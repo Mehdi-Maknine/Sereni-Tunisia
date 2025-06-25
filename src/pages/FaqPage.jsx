@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { MessageCircleQuestion, Send } from "lucide-react";
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";   
+import ResizableNavbar from "@/components/ResizableNavbar";   
 
 const FAQPage = () => {
   const faqs = [
@@ -27,7 +27,7 @@ const FAQPage = () => {
 
   return (
     <div className="min-h-screen py-14 px-6 bg-gradient-to-br from-[#f2f2f2] to-[#e0f7fa]">
-        <Navbar />
+        <ResizableNavbar />
       <motion.div
         className="text-center mb-10"
         initial={{ opacity: 0, y: -30 }}

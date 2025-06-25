@@ -1,23 +1,23 @@
 import { Plane, Heart, Users, Leaf, Quote, Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Navbar from '@/components/Navbar';
+import ResizableNavbar from "@/components/ResizableNavbar";   
 
 export default function VivereInTunisia() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <ResizableNavbar />
 
       {/* Spazio sotto navbar */}
-      <div className="h-16 md:h-15" />
+      <div className="h-16 md:h-14" />
 
       {/* Hero Section */}
       <section className="relative warm-gradient py-20 px-4 text-center">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight ">
             🌅 Vivere a Sousse con serenità
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl -foreground mb-8 max-w-3xl mx-auto">
             Scopri perché sempre più pensionati scelgono la perla del Sahel tunisino per vivere meglio.
           </p>
           <Button 
@@ -27,7 +27,7 @@ export default function VivereInTunisia() {
             Contattaci per saperne di più
           </Button>
         </div>
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-40">
           <img 
             src="/images/sousse-hero.jpg" 
             alt="Spiaggia di Sousse" 

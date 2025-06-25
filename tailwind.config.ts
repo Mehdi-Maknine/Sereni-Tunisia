@@ -1,16 +1,25 @@
 
 import type { Config } from "tailwindcss";
+import animate from 'tailwindcss-animate';
+
 
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+	"./pages/**/*.{js,jsx,ts,tsx}",
+	"./components/**/*.{js,jsx,ts,tsx}",
+	"./app/**/*.{js,jsx,ts,tsx}",
+	"./src/**/*.{js,jsx,ts,tsx}",
 	],
 	prefix: "",
 	theme: {
+		screens: {
+			sm: '640px',
+			md: '768px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1400px',
+		},
 		container: {
 			center: true,
 			padding: '2rem',
@@ -71,7 +80,8 @@ export default {
 					'beige-dark': '#e8ddc7',
 					olive: '#a8b894',
 					'olive-dark': '#8fa67c',
-					warm: '#f9f6f0'
+					warm: '#f9f6f0',
+					green: '#7FB77E',
 				}
 			},
 			borderRadius: {
@@ -113,9 +123,12 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif']
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				h1: ['Quicksand', 'sans-serif'],
+				h2: ['Nunito', 'sans-serif'],
+				h3: ['Karla', 'sans-serif'],
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;

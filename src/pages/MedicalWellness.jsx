@@ -2,7 +2,7 @@ import React from 'react';
 import { HeartPulse, Stethoscope, Syringe, Brain, Bed } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import Navbar from "@/components/Navbar"; 
+import ResizableNavbar from "@/components/ResizableNavbar";   
 
 const services = [
   {
@@ -35,7 +35,7 @@ const services = [
 const MedicalWellness = () => {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
-        <Navbar />
+        <ResizableNavbar />
       {/* Spazio sotto navbar */}
       <div className="h-16 md:h-15" />
       <div className="text-center mb-10">

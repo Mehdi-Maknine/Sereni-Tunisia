@@ -1,6 +1,6 @@
 import { BedDouble, MapPin, CheckCircle, Coins } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Navbar from "@/components/Navbar"; 
+import ResizableNavbar from "@/components/ResizableNavbar";   
 
 const residences = [
   {
@@ -22,10 +22,24 @@ const residences = [
 export default function Residenze() {
   return (
     <section className="py-16 px-4 md:px-12 bg-[#faf7f3] min-h-screen">
-    <Navbar />
-      <h2 className="text-4xl font-bold mb-8 flex items-center gap-3">
-        <BedDouble className="text-primary" /> Le Nostre Residenze 
-      </h2>
+    <ResizableNavbar />
+          <div className="h-16 md:h-14" />
+
+      <div className="mb-10 text-center flex flex-col items-center justify-center">
+        <div className="flex items-center gap-4 mb-4">
+          <img
+            src="/icons/house-relax.svg"
+            alt="Casa Serena"
+            className="w-12 h-12"
+          />
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground">
+            La tua casa lontano da casa
+          </h2>
+        </div>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Abbiamo selezionato per te residenze accoglienti, moderne e sicure per vivere al meglio la tua esperienza in Tunisia.
+        </p>
+      </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {residences.map((residence, index) => (

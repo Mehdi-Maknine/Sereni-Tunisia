@@ -1,116 +1,170 @@
-import { Plane, ClipboardList, Smile, UserCheck, ShieldCheck, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Phone,
+  Video,
+  Home,
+  FileText,
+  Plane,
+  HelpingHand,
+  MapPin
+} from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import Navbar from "@/components/Navbar"; 
+import  ResizableNavbar  from '@/components/ResizableNavbar';
+/* import Navbar from '@/components/Navbar'; */
+import StepTimelineItem from '@/components/StepTimelineItem';
+
+
+
+
+
+const steps = [
+  {
+    icon: <Phone className="w-6 h-6 text-white" />,
+    color: 'bg-mediterranean-blue',
+    title: 'Contatto iniziale',
+    description: 'Inizia tutto da un messaggio, una chiamata o una semplice email. Ti ascoltiamo con empatia e raccogliamo tutte le informazioni utili.',
+    bullets: [
+      'Primo contatto telefonico o via email',
+      'Raccolta delle esigenze principali',
+      'Spiegazione generale del servizio'
+    ]
+  },
+  {
+    icon: <Video className="w-6 h-6 text-white" />,
+    color: 'bg-mediterranean-green',
+    title: 'Prima consulenza gratuita',
+    description: 'Facciamo una videochiamata approfondita, ascoltiamo le tue esigenze e rispondiamo a tutte le domande pratiche, mediche e organizzative.',
+    bullets: [
+      'Durata media: 30–45 minuti',
+      'Conosciamo le preferenze dell’ospite',
+      'Condivisione dei prossimi step'
+    ]
+  },
+  {
+    icon: <Home className="w-6 h-6 text-white" />,
+    color: 'bg-mediterranean-blue',
+    title: 'Scelta della residenza',
+    description: 'Ti presentiamo una selezione di alloggi in base al profilo dell’ospite. Puoi visualizzare foto, servizi inclusi e posizione.',
+    bullets: [
+      'Case private e residenze assistite',
+      'Supporto nella scelta finale',
+      'Possibilità di visita virtuale'
+    ]
+  },
+  {
+    icon: <FileText className="w-6 h-6 text-white" />,
+    color: 'bg-mediterranean-green',
+    title: 'Supporto documenti e viaggio',
+    description: 'Gestiamo ogni aspetto burocratico: dal passaporto alla prenotazione del volo, fino all’assicurazione sanitaria.',
+    bullets: [
+      'Lista documenti e scadenze',
+      'Assistenza visti e assicurazioni',
+      'Organizzazione volo andata'
+    ]
+  },
+  {
+    icon: <Plane className="w-6 h-6 text-white" />,
+    color: 'bg-mediterranean-blue',
+    title: 'Arrivo e accoglienza in Tunisia',
+    description: 'Il nostro operatore ti accoglie in aeroporto e ti accompagna nella tua nuova residenza, pronto a darti supporto.',
+    bullets: [
+      'Accoglienza personalizzata',
+      'Trasferimento incluso',
+      'Prima sistemazione e orientamento'
+    ]
+  },
+  {
+    icon: <HelpingHand className="w-6 h-6 text-white" />,
+    color:  'bg-mediterranean-green',
+    title: 'Assistenza continua e vita quotidiana',
+    description: 'Ogni giorno siamo presenti per garantire salute, benessere, socialità e serenità nella vita quotidiana.',
+    bullets: [
+      'Supporto medico e infermieristico',
+      'Attività ricreative e uscite',
+      'Contatto costante con la famiglia'
+    ]
+  }
+];
 
 const ComeFunziona = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      {/* Spazio sotto navbar */}
-      <div className="h-16 md:h-15" />
-      {/* Hero Section */}
-      <section className="relative warm-gradient py-20 px-4 text-center">
-        <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Come funziona il nostro servizio?
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Dalla prima chiamata all’arrivo sereno in Tunisia: ecco ogni passo.
-          </p>
-          <Button
-            size="lg"
-            className="mediterranean-blue text-white font-semibold px-8 py-4 text-lg hover:opacity-90"
-            onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
+      <ResizableNavbar/>
+
+    <section className="relative warm-gradient py-20 px-4 text-center overflow-hidden">
+      
+      <div className="h-16 md:h-14" />
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-40">
+        
+        <img 
+          src="/images/sousse1.jpg" 
+          alt="Tunisia landscape" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <div className="container mx-auto max-w-4xl animate-fade-in">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight"
           >
-            Scopri tutti i passaggi
+            Come funziona il soggiorno con noi?
+          </motion.h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Ti accompagniamo in ogni passo: dalla prima consulenza fino alla vita quotidiana in Tunisia.
+          </p>
+
+          <Button 
+            size="lg" 
+            className="mediterranean-blue text-white font-semibold px-8 py-4 text-lg hover:opacity-90 transition-all transform hover:scale-105"
+            onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Scopri il nostro processo completo
           </Button>
         </div>
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://images.unsplash.com/photo-1609838468745-1e7c7b48676d?auto=format&fit=crop&w=1200&q=80"
-            alt="Tunisia landscape"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Timeline / Steps */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            Il percorso passo dopo passo
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Phone className="w-8 h-8 text-white" />,
-                title: 'Contatto iniziale',
-                desc: 'Ti ascoltiamo con attenzione e ti forniamo una consulenza gratuita personalizzata.',
-                color: 'bg-mediterranean-blue',
-              },
-              {
-                icon: <ClipboardList className="w-8 h-8 text-white" />,
-                title: 'Documenti & Organizzazione',
-                desc: 'Ti aiutiamo con tutta la burocrazia necessaria: passaporti, assicurazioni, traduzioni.',
-                color: 'bg-olive-accent',
-              },
-              {
-                icon: <Plane className="w-8 h-8 text-white" />,
-                title: 'Partenza & Arrivo',
-                desc: 'Organizziamo volo e accoglienza. All’arrivo, un operatore ti accompagna a casa.',
-                color: 'bg-mediterranean-blue',
-              },
-              {
-                icon: <UserCheck className="w-8 h-8 text-white" />,
-                title: 'Inserimento guidato',
-                desc: 'Conosci la zona, partecipi ad attività, fai amicizia con altri ospiti.',
-                color: 'bg-olive-accent',
-              },
-              {
-                icon: <ShieldCheck className="w-8 h-8 text-white" />,
-                title: 'Assistenza continua',
-                desc: 'Personale e medici sempre disponibili. Siamo presenti ogni giorno.',
-                color: 'bg-mediterranean-blue',
-              },
-              {
-                icon: <Smile className="w-8 h-8 text-white" />,
-                title: 'Contatto con la famiglia',
-                desc: 'Organizziamo videochiamate, visite e aggiornamenti costanti per stare sempre vicini.',
-                color: 'bg-olive-accent',
-              },
-            ].map((step, idx) => (
-              <Card key={idx} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className={`mx-auto w-16 h-16 ${step.color} rounded-full flex items-center justify-center mb-4`}>
-                    {step.icon}
-                  </div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{step.desc}</p>
-                </CardContent>
-              </Card>
+      {/* Detailed Timeline */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Il percorso in 6 step dettagliati</h2>
+          <div className="relative border-l-2 border-muted pl-6 space-y-16">
+            {steps.map((step, idx) => (
+              <StepTimelineItem
+                key={idx}
+                idx={idx}
+                icon={step.icon}
+                color={step.color}
+                title={step.title}
+                description={step.description}
+                bullets={step.bullets}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Call To Action */}
       <section className="py-16 px-4 text-center">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl font-bold mb-6">
-            Vuoi parlarne con noi?
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">Pronto a fare il primo passo?</h2>
           <p className="text-muted-foreground mb-8">
-            Prenota ora una consulenza gratuita: parliamo delle esigenze dei tuoi cari e troviamo insieme la soluzione giusta.
+            Parla con noi oggi stesso e scopri se la Tunisia è la scelta giusta per i tuoi cari.
           </p>
           <Button
             size="lg"
             className="mediterranean-blue text-white px-10 py-4 text-lg hover:scale-105 transition-transform"
             onClick={() => window.location.href = '/#contatti'}
           >
-            Richiedi Consulenza Gratuita
+            Prenota una chiamata gratuita
           </Button>
         </div>
       </section>

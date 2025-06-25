@@ -71,3 +71,13 @@
 .olive-accent {
   background: linear-gradient(135deg, #a8b894 0%, #8fa67c 100%);
 }
+
+h1 {
+  @apply font-h1 text-4xl md:text-5xl font-bold text-mediterranean-blue leading-tight tracking-wide;
+}
+h2 {
+  @apply font-h2 text-3xl md:text-4xl font-semibold;
+}
+h3 {
+  @apply font-h3 text-2xl font-medium;
+}

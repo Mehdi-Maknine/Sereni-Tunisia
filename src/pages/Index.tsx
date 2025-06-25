@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import Navbar from '@/components/Navbar';
+import ResizableNavbar from "@/components/ResizableNavbar";   
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
@@ -40,38 +40,41 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <ResizableNavbar />
       {/* Spazio sotto navbar */}
-      <div className="h-16 md:h-15" />
-      {/* Hero Section */}
-      <section className="relative warm-gradient py-20 px-4 text-center">
-        <div className="container mx-auto max-w-4xl">
-          <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Un anno sereno in Tunisia per i tuoi cari
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Volo, casa e assistenza inclusi — pensiamo a tutto noi.
-            </p>
-            <Button 
-              size="lg" 
-              className="mediterranean-blue text-white font-semibold px-8 py-4 text-lg hover:opacity-90 transition-all transform hover:scale-105"
-              onClick={() => document.getElementById('contatti')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Contattaci ora per maggiori informazioni
-            </Button>
-            
+      <div className="h-16 md:h-14" />
+      <section className="relative h-screen w-full warm-gradient text-center overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 opacity-10">
+    <img
+      src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=1200&q=80"
+      alt="Tunisia landscape"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          </div>
-        </div>
-        <div className="absolute inset-0 opacity-10">
-          <img 
-            src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=1200&q=80" 
-            alt="Tunisia landscape" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
+  {/* Content */}
+  <div className="relative z-10 h-full flex items-center justify-center px-4">
+    <div className="container mx-auto max-w-4xl animate-fade-in">
+      <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+        Un anno sereno in Tunisia per i tuoi cari
+      </h1>
+      <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+        Volo, casa e assistenza inclusi — pensiamo a tutto noi.
+      </p>
+      <Button
+        size="lg"
+        className="mediterranean-blue text-white font-semibold px-8 py-4 text-lg hover:opacity-90 transition-all transform hover:scale-105"
+        onClick={() =>
+          document.getElementById("contatti")?.scrollIntoView({ behavior: "smooth" })
+        }
+      >
+        Contattaci ora per maggiori informazioni
+      </Button>
+    </div>
+  </div>
+</section>
+
       {/* Chi Siamo */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
