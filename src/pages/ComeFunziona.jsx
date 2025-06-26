@@ -5,18 +5,61 @@ import {
   FileText,
   Plane,
   HelpingHand,
-  MapPin
+  MapPin,
+  CheckCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import  ResizableNavbar  from '@/components/ResizableNavbar';
-/* import Navbar from '@/components/Navbar'; */
 import StepTimelineItem from '@/components/StepTimelineItem';
+import PricingCards from '@/components/PricingCards';
 
 
 
 
 
+const packages = [
+  {
+    title: "1 Mese di Serenità",
+    price: "€3.000",
+    original: null,
+    image: "/images/senior1.jpg",
+    features: [
+      "Assistenza medica h24",
+      "Alloggio incluso",
+      "Pasti e lavanderia",
+      "Attività quotidiane",
+      "Trasferimenti locali",
+    ],
+  },
+  {
+    title: "1 Anno di Benessere",
+    price: "€5.000",
+    original: "€6.000",
+    image: "/images/senior2.jpg",
+    featured: true,
+    features: [
+      "Tutto incluso per 12 mesi",
+      "Sconto esclusivo",
+      "Scegli tu la residenza",
+      "Supporto personalizzato",
+      "Zero preoccupazioni",
+    ],
+  },
+  {
+    title: "2 Anni Sereni",
+    price: "€9.000",
+    original: "€12.000",
+    image: "/images/senior3.jpg",
+    features: [
+      "Tutto incluso per 24 mesi",
+      "Risparmio massimo",
+      "Monitoraggio salute continuo",
+      "Servizi premium",
+      "Ideale per lunghe permanenze",
+    ],
+  },
+];
 const steps = [
   {
     icon: <Phone className="w-6 h-6 text-white" />,
@@ -151,6 +194,9 @@ const ComeFunziona = () => {
           </div>
         </div>
       </section>
+       {/* Pricing section */}
+      <PricingCards />
+
 
       {/* Call To Action */}
       <section className="py-16 px-4 text-center">
