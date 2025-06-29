@@ -13,9 +13,10 @@ import { cn } from "@/lib/utils"; // oppure rimuovi se non usi tailwind-merge
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Come Funziona", path: "/come-funziona" },
+  { label: "Vivere in Tunisia", path: "/vivere-in-tunisia" },
   { label: "Residenze", path: "/residenze" },
   { label: "Servizi Medici", path: "/servizi-medici-benessere" },
-  { label: "Vivere in Tunisia", path: "/vivere-in-tunisia" },
+  { label: "Contatti", path: "/contatti" },
   { label: "FAQ", path: "/faq" },
 ];
 
@@ -88,6 +89,7 @@ const ResizableNavbar = () => {
             >
               {item.label}
             </button>
+
           ))}
         </MobileNavMenu>
       </motion.div>
@@ -101,7 +103,7 @@ const NavbarLogo = () => (
     className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
   >
     <img
-      src="https://assets.aceternity.com/logo-dark.png"
+      src="/images/house_building.png"
       alt="logo"
       width={30}
       height={30}

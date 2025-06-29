@@ -10,6 +10,9 @@ import Residenze from "./pages/Residenze";
 import MedicalWellness from "./pages/MedicalWellness";
 import VivereInTunisia from "./pages/VivereInTunisia";
 import FaqPage from "./pages/FaqPage";
+import Contacts from "./pages/Contacts";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 const queryClient = new QueryClient();
 
@@ -19,19 +22,22 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-          <Route path="/come-funziona" element={<ComeFunziona />} />
-          <Route path="/residenze" element={<Residenze />} />
-          <Route path="/servizi-medici-benessere" element={<MedicalWellness />} />
-          <Route path="/vivere-in-tunisia" element={<VivereInTunisia />} />
-          <Route path="/faq" element={<FaqPage />} />
+        <ScrollToTop />
+          <Routes>
+
+            <Route path="/" element={<Index />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+            <Route path="/come-funziona" element={<ComeFunziona />} />
+            <Route path="/residenze" element={<Residenze />} />
+            <Route path="/servizi-medici-benessere" element={<MedicalWellness />} />
+            <Route path="/vivere-in-tunisia" element={<VivereInTunisia />} />
+            <Route path="/contatti" element={<Contacts />} />
+            <Route path="/faq" element={<FaqPage />} />
 
 
 
-        </Routes>
+          </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
