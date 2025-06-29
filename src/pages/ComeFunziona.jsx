@@ -133,6 +133,7 @@ const ComeFunziona = () => {
   return (
     <div className="min-h-screen bg-background">
       <ResizableNavbar/>
+      <div className="h-16 md:h-14" />
 
     <section className="relative warm-gradient py-20 px-4 text-center overflow-hidden">
       
