@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import  ResizableNavbar  from '@/components/ResizableNavbar';
 import StepTimelineItem from '@/components/StepTimelineItem';
 import PricingCards from '@/components/PricingCards';
+import Footer from '@/components/Footer';
 
 
 
@@ -215,6 +216,7 @@ const ComeFunziona = () => {
           </Button>
         </div>
       </section>
+    <Footer />
     </div>
   );
 };

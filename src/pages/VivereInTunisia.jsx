@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import ResizableNavbar from '@/components/ResizableNavbar';
 import LottieIcon from "@/components/LottieIcon";
 import { lottieIconMap } from "@/utils/LottieIconMap";
+import Footer from '@/components/Footer';
+
 
 
 export default function VivereInTunisia() {
@@ -187,6 +189,7 @@ export default function VivereInTunisia() {
           </div>
         </div>
       </section>        
+      <Footer/>
     </div>
   );
 }

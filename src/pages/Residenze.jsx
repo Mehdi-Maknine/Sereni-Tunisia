@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BedDouble, MapPin, CheckCircle, Coins, X } from "lucide-react";
 import ResizableNavbar from "@/components/ResizableNavbar";
 import { Button } from "@/components/ui/button";
+import Footer from '@/components/Footer';
+
 
 const residences = [
   {
@@ -90,6 +92,7 @@ export default function Residenze() {
   };
 
   return (
+  <div>
     <section className="py-16  bg-[#faf7f3] ">
       <div className="md:px-12 px-4">
       <ResizableNavbar />
@@ -116,7 +119,7 @@ export default function Residenze() {
               setCurrentImg(0);
             }}
           >
-            <img src={residence.image[0]} alt={residence.name} className="w-full h-48 object-cover" />
+            <img src={residence.image[0]} alt={residence.name} className="w-full h-72 object-cover rounded-t-lg" />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-1">{residence.name}</h3>
               <p className="text-sm text-muted-foreground flex items-center gap-2 mb-2">
@@ -218,20 +221,9 @@ export default function Residenze() {
       </div>
       <div className="h-16 md:h-12" />
 
-      <section className="w-full py-20 px-6  bg-mediterranean-green text-white text-center">
-        <div className=" px-4 container mx-auto max-w-2xl">
-          <h3 className="text-3xl font-bold mb-4">Hai trovato la tua residenza ideale?</h3>
-          <p className="text-lg mb-6">Contattaci subito per prenotare o ricevere maggiori informazioni.</p>
-          <Button
-            size="lg"
-            className="bg-white text-mediterranean-blue font-semibold hover:bg-gray-100 transition"
-            onClick={() => document.getElementById("contatti")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Contattaci Ora
-          </Button>
-        </div>
-      </section>
     </section>
+      <Footer />
+    </div>
     
     
   );

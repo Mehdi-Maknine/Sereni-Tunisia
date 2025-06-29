@@ -4,7 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
-import ResizableNavbar from "@/components/ResizableNavbar";   
+import ResizableNavbar from "@/components/ResizableNavbar";  
+import Footer from '@/components/Footer';
+
 
 export default function Contacts() {
   const [formData, setFormData] = useState({
@@ -131,6 +133,7 @@ export default function Contacts() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

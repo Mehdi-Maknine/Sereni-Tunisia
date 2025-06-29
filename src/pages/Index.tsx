@@ -9,6 +9,8 @@ import ResizableNavbar from "@/components/ResizableNavbar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
+import Footer from '@/components/Footer';
+
 
 
 const Index = () => {
@@ -446,21 +448,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h3 className="text-2xl font-bold mb-4">Vivere Sereni in Tunisia</h3>
-          <p className="text-lg opacity-80 mb-6">
-            La serenità dei tuoi cari è la nostra priorità
-          </p>
-          <div className="flex justify-center space-x-8 text-sm opacity-60">
-            <span>Privacy Policy</span>
-            <span>•</span>
-            <span>Termini di Servizio</span>
-            <span>•</span>
-            <span>© 2025 Vivere Sereni</span>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
